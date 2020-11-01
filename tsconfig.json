@@ -12,7 +12,7 @@
     "noUnusedLocals": false,
     "allowJs": true
   },
-  "include": ["src/**/*", "stories/**/*"],
+  "include": ["src/**/*", "stories/**/*", "global.d.ts"],
   "exclude": [
     "node_modules",
     "public",

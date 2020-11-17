@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonAsLink from '../links/button-as-link'
 import slackIcon from '../../images/icon-slack.png'
 
 import * as S from './styles'
@@ -9,6 +10,10 @@ export interface Props {
   cover: string
   slackLink: string
 }
+
+/**
+ * TODO: responsive, button color
+ */
 
 const PaneVolunteer: React.FC<Props> = ({
   title,
@@ -21,9 +26,9 @@ const PaneVolunteer: React.FC<Props> = ({
     <S.Content>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-      <a href={slackLink}>
-        <img src={slackIcon} alt="slack icon" /> Přidat se do Slacku
-      </a>
+      <ButtonAsLink inverted to={slackLink}>
+        <S.Icon src={slackIcon} alt="Slack icon" /> Přidat se do Slacku
+      </ButtonAsLink>
     </S.Content>
   </S.Card>
 )
